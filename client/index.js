@@ -48,7 +48,7 @@ document.getElementById('deck-form').addEventListener('submit', function(e) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ cardId: card.id, cardName: card.name }), // send the id and name
+            body: JSON.stringify({ cardId: card.id, cardName: card.name }),
         })
         .then(response => {
             if (!response.ok) {
@@ -63,7 +63,7 @@ document.getElementById('deck-form').addEventListener('submit', function(e) {
             deckDiv.appendChild(cardDiv);
 
             // Add a notification that the card has been added
-            alert(`Card "${data.name}" was added to the deck.`);
+            alert(`Card "${card.name}" was added to the deck.`);
         })
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);

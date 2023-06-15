@@ -1,3 +1,7 @@
+
+body {
+    background-color: rgb(252, 252, 196);
+}
 body1 {
     background-color: rgb(162, 162, 255);
     display: flex;
@@ -29,7 +33,7 @@ body2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: beige;
+    background-color: rgb(150, 150, 114);
    
 }
 
