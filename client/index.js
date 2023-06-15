@@ -67,3 +67,8 @@ document.getElementById('deck-form').addEventListener('submit', function(e) {
     document.getElementById('card-id').value = '';
 });
 
+// Section 3: specified searching/reference server.js 
+
+// section 4: card image div display/reference server.js 
+
+// section 5: deck manipulation and organization/reference server.js 

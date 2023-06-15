@@ -1,3 +1,4 @@
+// Section 1: Server
 const express = require('express');
 const cors = require('cors');
 const { handleSearch } = require('./ctrl'); // Importing handleSearch from ctrl.js
