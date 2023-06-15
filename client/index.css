@@ -4,21 +4,27 @@ body1 {
     flex-direction: column;
 }
 h1 {
+    display: flex;
     color: brown;
-    font-size: 45px;
+    font-size: 55px;
+    font-style: oblique;
+    height: 1vh;
 }
 h2 {
     color: blue;
+    font: oblique;
 }
 h3 {
     align-items: center;
     font-size: larger;
     color: rgb(182, 37, 37);
+    font: bold;
+    height: 1vh;
 }
 
 body2 {
-    height: 85vh;
-    width: 100vw;
+    height: 70vh;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,4 +42,3 @@ form {
     border: 5px solid black;
     background-color: brown;
 }
-
