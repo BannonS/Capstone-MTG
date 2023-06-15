@@ -1,5 +1,12 @@
 // Section 2: displaying search results and adding cards to deck.
 
+// NOTES!!! 
+// 1. when displaying results, results go up page instead of down page and use scroll
+
+// BUGS!!!
+// 1. deck div does not display, but no network or server error.
+// 2. "card added" notification displays "undefined" instead of card name.
+
 // Search results and card display and keep track of selected cards
 let selectedCards = [];
 
