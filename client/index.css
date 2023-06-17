@@ -2,7 +2,7 @@
 body {
     background-color: rgb(252, 252, 196);
 }
-body1 {
+.body1 {
     background-color: rgb(162, 162, 255);
     display: flex;
     flex-direction: column;
@@ -23,10 +23,9 @@ h3 {
     font-size: larger;
     color: rgb(182, 37, 37);
     font: bold;
-    height: 1vh;
 }
 
-body2 {
+.body2 {
     height: 70vh;
     width: 50vw;
     display: flex;
@@ -45,4 +44,34 @@ form {
     padding: 20px;
     border: 5px solid black;
     background-color: brown;
+}
+#deck {
+    width: 300px;
+    height: 500px;
+    background-color: rgb(162, 162, 255);
+    overflow: auto;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+#search-results {
+    height: 200px; 
+    overflow-y: auto; 
+}
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body2 {
+    width: 55%; 
+}
+
+.imageDisplay {
+    width: 30%; 
+    height: 500px; 
+    border: 2px solid black;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+  
 }

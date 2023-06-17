@@ -6,31 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deckbuilder app name 1</title>
     <link rel="stylesheet" href="index.css">
-   
+    <div class='body1'>
+        <h1>TopDecks</h1>
+        <h3>Its a place for Magic the Gathering deckbuilding</h3>
+    </div>
 </head>
-<body1> 
-    <h1>TopDecks</h1>
-    <h3>The best place for Magic the Gathering deckbuilding</h3>
-</body1>
+<body>
 
-<body2>
-    <h2>Search and Build Here, if you dare...</h2>
-    
-    <form id="search-form">
-        <input type="text" id="search-query" placeholder="Search cards">
-        <button type="submit">Search</button>
-    </form>
+    <div class="main-content">
+        <div class="body2">
+            <h2>Search and Build Here, if you dare...</h2>
+            
+            <form id="search-form">
+                <input type="text" id="search-query" placeholder="Search cards">
+                <input type="checkbox" id="legendary-checkbox">Legendary
+                <select id="type-selector">
+                    <option value="">Any</option>
+                    <option value="Creature">Creature</option>
+                    <option value="Instant">Instant</option>
+                    <option value="Sorcery">Sorcery</option>
+                    <option value="Land">Land</option>
+                    <option value="Artifact">Artifact</option>
+                    <option value="Enchantment">Enchantment</option>
+                    <option value="Planeswalker">Planeswalker</option>
+                    <option value="Battle">Battle</option>
+                    <option value="Tribal">Tribal</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+            
+            <div id="search-results"></div>
 
-    <div id="search-results"></div>
+            <form id="deck-form">
+                <input type="text" id="card-id" placeholder="Enter card ID">
+                <button type="submit">Add to deck</button>
+            </form>
 
-    <form id="deck-form">
-        <input type="text" id="card-id" placeholder="Enter card ID">
-        <button type="submit">Add to deck</button>
-    </form>
+            <div id="deck"></div>
+        </div>
 
-    <div2 id="deck"></div2>
-    
+        <div class='imageDisplay'>
+            <img id="card-preview" src="" alt="Card Preview" />
+        </div>
+    </div>
+
     <script src="index.js"></script>
-</body2>
+</body>
 </html>
-

@@ -14,26 +14,27 @@ let deck = [];
 
 app.get('/search', handleSearch);
 
+// ADD TO DECK 
 app.post('/deck', (req, res) => {
   const { cardId, cardName } = req.body;
 
   if (typeof cardId === 'string' && typeof cardName === 'string' && cardId.trim() !== '') {
     deck.push({ id: cardId, name: cardName });
-    res.json({ message: 'Card added successfully to deck', cardId: cardId, cardName: cardName });
+    return res.json({ message: 'Card added successfully to deck', cardId: cardId, cardName: cardName });
   } else if (Array.isArray(cardId) && Array.isArray(cardName) && cardId.length === cardName.length) {
     cardId.forEach((id, index) => {
       if (typeof id === 'string' && typeof cardName[index] === 'string' && id.trim() !== '') {
         deck.push({ id, name: cardName[index] });
       } else {
-        res.status(400).json({ error: 'Invalid cardId or cardName in arrays' });
-        return;
+        return res.status(400).json({ error: 'Invalid cardId or cardName in arrays' });
       }
     });
-    res.json({ message: `${cardId.length} cards added successfully to deck`, cardIds: cardId, cardNames: cardName });
+    return res.json({ message: `${cardId.length} cards added successfully to deck`, cardIds: cardId, cardNames: cardName });
   } else {
-    res.status(400).json({ error: 'Invalid cardId or cardName' });
+    return res.status(400).json({ error: 'Invalid cardId or cardName' });
   }
 });
+
 
 
 
