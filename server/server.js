@@ -4,7 +4,7 @@ const cors = require('cors');
 const { handleSearch } = require('./ctrl'); // Importing handleSearch from ctrl.js
 require('dotenv').config()
 
-const app = express();
+const app = express(); 
 
 app.use(express.json())
 app.use(cors());
@@ -14,7 +14,7 @@ let deck = [];
 
 app.get('/search', handleSearch);
 
-// ADD TO DECK 
+// ADDING TO DECK 
 app.post('/deck', (req, res) => {
   const { cardId, cardName } = req.body;
 
@@ -34,9 +34,6 @@ app.post('/deck', (req, res) => {
     return res.status(400).json({ error: 'Invalid cardId or cardName' });
   }
 });
-
-
-
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`)) 
 
