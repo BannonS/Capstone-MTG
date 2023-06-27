@@ -9,13 +9,13 @@ document.getElementById('search-form').addEventListener('submit', function(e) {
 
   const query = document.getElementById('search-query').value;
   const type = document.getElementById('type-selector').value;
-  const isLegendary = document.getElementById('legendary-checkbox').checked; // grab checkbox value
+  const isLegendary = document.getElementById('legendary-checkbox').checked; 
 
   // section 3: Specified Searching
   fetch(`http://localhost:7788/search?query=${query}`)
     .then(response => response.json())
     .then(data => {
-      console.log('Data returned from API:', data); // Log the raw data
+      console.log('Data returned from API:', data); 
       // If a type was selected or if legendary checkbox is checked, filter the cards by type and legendary status
       if (type || isLegendary) {
         data = data.filter(card => {
